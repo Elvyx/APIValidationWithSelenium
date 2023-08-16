@@ -19,5 +19,8 @@ Use Selenium WebDriver commands to interact with the UI elements, such as fillin
 Extract the relevant data from the web application UI using Selenium WebDriver commands.
 Compare the API response data and the web application data for validation.
 
-The Public API used for this test is 
+The Class name-APIVAlidationWithSelenium2 contains the code for API Automation creation (POST-request) as well as Automating same request on the web browser. The API URL used is https://demoqa.com/Account/v1/user and the request type is a post request which returned a success message as 201 Created and the Web application Url is https://demoqa.com/register. 
+
+A show stopper was encounter during the execution of the scripts, as the Captcha could not automated by selenium. This prevented the scripts from running properly.
+Selenium do not automate Captcha and this is a showstopper to automating user registration process.
 
