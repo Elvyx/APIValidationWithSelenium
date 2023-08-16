@@ -39,7 +39,7 @@ public class APIValidationWithSelenium2 {
 		String apiEndpoint = "https://demoqa.com/Account/v1/User";
 		
 		String requestData = "{\n" +
-                "    \"userName\": \"Romeo\",\n" +
+                "    \"userName\": \"Lulabi\",\n" +
                 "    \"password\": \"Password123*\"\n" +
                 "}";
 
@@ -71,6 +71,24 @@ public class APIValidationWithSelenium2 {
             }
             String userId = jsonResponse.getString("userID");
             String username = jsonResponse.getString("username");
+            
+            
+URL url= new URL(apiEndpoint);
+            
+            HttpURLConnection conn=   (HttpURLConnection) url.openConnection();
+    		conn.setRequestMethod("POST");
+    		conn.connect();
+    		
+    		int respCode=conn.getResponseCode();
+    		System.out.println(respCode);
+    		String ct=conn.getContentType();
+    		System.out.println(ct);
+    		String respMessage=conn.getResponseMessage();
+    		System.out.println(respMessage);
+    		
+    		
+    		
+    		
         
   
             
